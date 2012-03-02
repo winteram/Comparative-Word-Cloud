@@ -1,0 +1,24 @@
+File-Name:       comparative_word_cloud.R           
+Date:            2012-03-01                              
+Author:          Winter Mason
+Email:           m@winteram.com                                   
+Purpose:         Attempt to improve on Drew Conway's word-cloud
+Packages Used:   tm, ggplot2  
+Input:		 sourcedir: directory that contains two text files to be compared
+		 imgname: the name of the output image file
+		 add.stops: a list of words to ignore in the text
+		 nwords: the maximum number of most frequent words to plot
+		 imgwidth,imgheight: dimensions of the resulting image
+		 mintext,maxtext: the range of word sizes in the plot
+Output File:     word_cloud.pdf
+
+Copyright (c) 2012, under the Simplified BSD License.  
+For more information on FreeBSD see: http://www.opensource.org/licenses/bsd-license.php
+All rights reserved.                                                         
+
+--------------------
+
+Example usage to recreate the Obama-Palin word cloud from the blog post:
+
+source('comparative_word_cloud.R')
+comparative.word.cloud("data/",imgname="fig/word_cloud.png",add.stops=c("applause"),nwords=100)

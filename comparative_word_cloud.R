@@ -30,7 +30,7 @@ get.spaces <- function(df, mintext, maxtext) {
     wordlen <- strwidth(name,"figure")*diff(range(df$freq.dif))*ht.factor/5
     x.left <- df[name,"freq.dif"]-wordlen/2
     x.right <- df[name,"freq.dif"]+wordlen/2
-    df[name,"w"] <- abs(x.right - x.left)*1.4
+    df[name,"w"] <- abs(x.right - x.left)*1.2
     bad.spaces <- left.line[left.line$right>x.left,]
    
     # try top first
